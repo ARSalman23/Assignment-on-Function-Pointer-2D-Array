@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    char *arr_str[] = {"Abu", "Jafar", "Md Jakaria", "Sir"};
+
+    char **ptr = arr_str;
+
+    int size = sizeof(arr_str) / sizeof(arr_str[0]);
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%s ", *(ptr + i));
+    }
+
+    return 0;
+}
