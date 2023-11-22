@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPalindrome(int n)
+{
+    int reversed = 0, remainder, original;
+
+    original = n;
+
+    while (n != 0)
+    {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+
+    return (original == reversed) ? true : false;
+}
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    printf("%d is %sPalindrome\n", n, isPalindrome(n) ? "" : "not a ");
+
+    return 0;
+}
+
